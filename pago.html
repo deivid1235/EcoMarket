@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resumen de Pago - EcoMarket</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="contactos-body">
+    <h1 class="logo-main">Productos del carrito</h1>
+    <div id="resumen-carrito" class="grid-carrito"></div>
+    <h2 id="total" class="total-pago"></h2>
+
+    <div style="margin: 20px 0;">
+        <button onclick="vaciarCarrito()" style="background-color: #e60000; color: white; padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer;">
+            Vaciar carrito 🗑️
+        </button>
+    </div>
+
+    <div class="metodos-pago">
+        <h2>Elige un método de pago</h2>
+
+        <div class="metodo">
+            <h3>Pago con tarjeta</h3>
+            <input type="text" placeholder="Número de tarjeta" id="numTarjeta" class="input-pago">
+            <input type="password" placeholder="Clave" id="claveTarjeta" class="input-pago">
+            <button onclick="pagarConTarjeta()">Pagar</button>
+        </div>
+
+        <div class="metodo">
+            <h3>Pago con Yape</h3>
+            <input type="text" placeholder="Número de celular" id="numYape" class="input-pago">
+            <button onclick="pagarConYape()">Pagar</button>
+        </div>
+    </div>
+
+</body>
+<script>
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const resumen = document.getElementById('resumen-carrito');
+    const total = document.getElementById('total');
+
+    function renderCarrito() {
+        resumen.innerHTML = "";
+        let sumaTotal = 0;
+
+        carrito.forEach((item, index) => {
+            const div = document.createElement('div');
+            div.innerHTML = `
+                <p style="color: white;">Producto: ${item.nombre}</p>
+                <p style="color: white;">Precio: $${item.precio.toFixed(2)}</p>
+                <button onclick="eliminarProducto(${index})" style="background-color: red; color: white; border: none; padding: 5px 10px; border-radius: 5px; margin-top: 5px;">Eliminar</button>
+                <hr>
+            `;
+            resumen.appendChild(div);
+            sumaTotal += item.precio;
+        });
+
+        total.textContent = `Total a pagar: $${sumaTotal.toFixed(2)}`;
+    }
+
+    function eliminarProducto(index) {
+        carrito.splice(index, 1);
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+        renderCarrito();
+    }
+
+    function vaciarCarrito() {
+        if (confirm("¿Estás seguro de que deseas vaciar el carrito?")) {
+            carrito = [];
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+            renderCarrito();
+        }
+    }
+
+    function pagarConTarjeta() {
+        const tarjeta = document.getElementById('numTarjeta').value;
+        const clave = document.getElementById('claveTarjeta').value;
+
+        if (tarjeta === "" || clave === "") {
+            alert("Por favor completa los datos de la tarjeta.");
+            return;
+        }
+
+        const sumaTotal = carrito.reduce((acc, item) => acc + item.precio, 0);
+
+        const mensajeFactura = 
+            `Factura - Pago con Tarjeta\n` +
+            `Total pagado: $${sumaTotal.toFixed(2)}\n` +
+            `Tarjeta: **** **** **** ${tarjeta.slice(-4)}\n` +
+            `Gracias por tu compra en EcoMarket 🛒`;
+
+        alert(mensajeFactura);
+    }
+
+    function pagarConYape() {
+        const celular = document.getElementById('numYape').value;
+
+        if (celular === "") {
+            alert("Por favor ingresa tu número de celular.");
+            return;
+        }
+
+        const sumaTotal = carrito.reduce((acc, item) => acc + item.precio, 0);
+
+        const mensajeFactura = 
+            `Factura - Pago con Yape\n` +
+            `Total pagado: $${sumaTotal.toFixed(2)}\n` +
+            `Número Yape: ${celular}\n` +
+            `Gracias por tu compra en EcoMarket 🛒`;
+
+        alert(mensajeFactura);
+    }
+
+    renderCarrito();
+</script>
+</html>

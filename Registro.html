@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoMarket</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <div class="contenido-contacto">
+    <div class="contenido-contacto">
+      <img src="logos/Recurso-3.png" alt="Imagen decorativa" />
+    </div>
+
+    <form id="formulario" class="formulario">
+      <ul>
+        <label>EcoMarket</label>
+        <br />
+        <li id="campo-nombre" style="display: none;">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="user_name" />
+        </li>
+        <li>
+          <label for="mail">Correo electrónico:</label>
+          <input type="text" id="mail" name="user_email" />
+        </li>
+        <li>
+          <label for="contra">Contraseña:</label>
+          <input type="password" id="contra" name="user_codigo" />
+        </li>
+        <input type="hidden" name="accion" id="accion" value="login" />
+        <button type="submit">Ingrese</button>
+      </ul>
+    </form>
+  </div>
+
+  <footer>
+    <hr />
+    <p class="copyright">&copy; Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById("formulario");
+
+    form.addEventListener("submit", function(event) {
+      const correo = document.getElementById("mail").value.trim();
+      const contra = document.getElementById("contra").value.trim();
+
+      if (correo === "" || contra === "") {
+        alert("Por favor, complete todos los campos.");
+        event.preventDefault(); 
+        return;
+      }
+      if (!correo.includes("@")) {
+        alert("El correo electrónico debe contener '@'.");
+        event.preventDefault();
+        return;
+        }
+
+        event.preventDefault();
+        window.location.href = "principal.html";
+
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoMarket</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<script src="js/search.js"></script>
+
+<body class="contactos-body">
+
+    <nav class="contactos-nav">
+        <a href="Registro.html">Registro</a>   |
+        <a href="principal.html">Principal</a> | 
+        <a href="productos.html">Productos</a> |
+        <a href="Ofertas.html" >Ofertas</a> |
+        <a href="Contactos.html">Contactos</a> |
+    </nav>
+
+    <div class="search-container">
+        <div class="logo-main">EcoMarket</div>
+        <button class="menu-btn">☰ Menú</button>
+        <nav class="dropdown-menu">
+            <ul>
+                <li><a href="#" data-categoria="todo">Todo</a></li> 
+                <li><a href="#" data-categoria="frutas">Frutas</a></li>
+                <li><a href="#" data-categoria="verduras">Verduras</a></li>
+                <li><a href="#" data-categoria="granos">Granos</a></li>
+                <li><a href="#" data-categoria="legumbres">Legumbres</a></li>
+            </ul>
+        </nav>
+        <input type="text" class="search-box" id="buscador"  onkeyup="buscarProducto()" placeholder="Buscar productos">
+        <button class="search-btn" onclick="buscarProducto()"><img src="logos/buscra.jpg" alt="Buscar" width="30"></button>
+        <div class="user-options">
+            <a href="#">Hola, Bienvenidos▼</a>
+            <a href="#">Mis compras</a>
+            <a href="#">♡</a>
+            <a href="pago.html" style="position: relative;">
+                <img src="logos/carrito.png" alt="Carrito" width="30" onkeyup="buscarProducto()">
+                <span id="contador-carrito" style="position: absolute; top: -8px; right: -10px; background-color: red; color: white; border-radius: 50%; padding: 2px 6px; font-size: 12px;">0</span>
+            </a>
+                        
+        </div>
+    </div>
+    <section class="productos" id="productos-container">
+        <div class="card" data-categoria="frutas">
+            <img src="imagenes/manzana.jpg" class="centrar-imagen" alt="Manzana">
+            <h2 class="logo-main">Manzana</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (kg) $5</p>
+            <p>Cantidad : Kg, Lb ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+    
+        <div class="card" data-categoria="frutas">
+            <img src="imagenes/naranja.jpg" class="centrar-imagen" alt="Naranja">
+            <h2 class="logo-main">Naranja</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg) $7</p>
+            <p>Cantidad : Kg, Lb ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+    
+        <div class="card" data-categoria="frutas">
+            <img src="imagenes/piña.jpg" class="centrar-imagen" alt="Piña">
+            <h2 class="logo-main">Piña</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg) $10</p>
+            <p>Cantidad : Kg, Lb ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+    
+        <div class="card" data-categoria="frutas">
+            <img src="imagenes/papaya.jpg" class="centrar-imagen" alt="Papaya">
+            <h2 class="logo-main">Papaya</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg) $9</p>
+            <p>Cantidad : Kg, Lb ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="frutas">
+            <img src="imagenes/fresa.jpg" class="centrar-imagen" alt="Fresa">
+            <h2 class="logo-main">Fresa</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg) $3</p>
+            <p>Cantidad : Kg, Lb ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="frutas">
+            <img src="imagenes/uva.jpg" class="centrar-imagen" alt="Uva">
+            <h2 class="logo-main">Uva</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg) $5</p>
+            <p>Cantidad : Kg, Lb ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="frutas">
+            <img src="imagenes/mango.jpg" class="centrar-imagen" alt="Mango">
+            <h2 class="logo-main">Mango</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg) $3.5</p>
+            <p>Cantidad : Kg, Lb ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="frutas">
+            <img src="imagenes/sandia.jpg" class="centrar-imagen" alt="sandia">
+            <h2 class="logo-main">sandia</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg) $10</p>
+            <p>Cantidad : Kg, Lb ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+        
+        <div class="card" data-categoria="frutas">
+            <img src="imagenes/pera.jpg" class="centrar-imagen" alt="Pera">
+            <h2 class="logo-main">Pera</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg) $11</p>
+            <p>Cantidad : Kg, Lb ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="frutas">
+            <img src="imagenes/arandano.jpg" class="centrar-imagen" alt="Arandano">
+            <h2 class="logo-main">Arandano</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg) $12</p>
+            <p>Cantidad : Kg, Lb ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="frutas">
+            <img src="imagenes/platano.jpg" class="centrar-imagen" alt="Platano">
+            <h2 class="logo-main">Platano</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg) $6</p>
+            <p>Cantidad : Kg, Lb ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="frutas">
+            <img src="imagenes/durazno.png" class="centrar-imagen" alt="Durazno">
+            <h2 class="logo-main">Durazno</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$ 5</p>
+            <p>Cantidad : Kg, Lb ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="frutas">
+            <img src="imagenes/granadilla.png" class="centrar-imagen" alt="Granadilla">
+            <h2 class="logo-main">Granadilla</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg) $7</p>
+            <p>Cantidad : Kg, Lb ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="frutas">
+            <img src="imagenes/maracuya.jpg" class="centrar-imagen" alt="Maracuya">
+            <h2 class="logo-main">Maracuya</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg) $9</p>
+            <p>Cantidad : Kg, Lb ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="frutas">
+            <img src="imagenes/toronja.jpg" class="centrar-imagen" alt="Toronja">
+            <h2 class="logo-main">Toronja</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg) $10</p>
+            <p>Cantidad : Kg, Lb ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="frutas">
+            <img src="imagenes/ciruela.jpg" class="centrar-imagen" alt="Ciruela">
+            <h2 class="logo-main">Ciruela</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg) $2.6</p>
+            <p>Cantidad : Kg, Lb ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="frutas">
+            <img src="imagenes/coco.png" class="centrar-imagen" alt="Coco">
+            <h2 class="logo-main">Coco</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg) $13</p>
+            <p>Cantidad : Kg, Lb ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="frutas">
+            <img src="imagenes/guaba.jpg" class="centrar-imagen" alt="Guaba">
+            <h2 class="logo-main">Guaba</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg) $9</p>
+            <p>Cantidad : Kg, Lb ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="frutas">
+            <img src="imagenes/lucuma.jpg" class="centrar-imagen" alt="Lucuma">
+            <h2 class="logo-main">Lucuma</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg) $15</p>
+            <p>Cantidad : Kg, Lb ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="frutas">
+            <img src="imagenes/guanabana.jpg" class="centrar-imagen" alt="Guanábana">
+            <h2 class="logo-main">Guanábana</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg) $5</p>
+            <p>Cantidad : Kg, Lb ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="verduras">
+            <img src="imagenes/lechuga.jpg" class="centrar-imagen" alt="Lechuga">
+            <h2 class="logo-main">Lechuga</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)  $9</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="verduras">
+            <img src="imagenes/zanahorias.jpg" class="centrar-imagen" alt="Zanahoria">
+            <h2 class="logo-main">Zanahoria</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg) $7</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="verduras">
+            <img src="imagenes/brocoli.jpg" class="centrar-imagen" alt="Brócoli">
+            <h2 class="logo-main">Brócoli</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$8</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="verduras">
+            <img src="imagenes/espinass.jpg" class="centrar-imagen" alt="Espinaca">
+            <h2 class="logo-main">Espinaca</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$7</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="verduras">
+            <img src="imagenes/cebolla.jpg" class="centrar-imagen" alt="Cebolla">
+            <h2 class="logo-main">Cebolla</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$5</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="verduras">
+            <img src="imagenes/tomate.jpg" class="centrar-imagen" alt="Tomate">
+            <h2 class="logo-main">Tomate</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$5</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="verduras">
+            <img src="imagenes/papa.jpg" class="centrar-imagen" alt="Papa">
+            <h2 class="logo-main">Papa</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$9</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="verduras">
+            <img src="imagenes/coliflor.jpg" class="centrar-imagen" alt="Coliflor">
+            <h2 class="logo-main">Coliflor</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$7</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="verduras">
+            <img src="imagenes/pimiento.jpg" class="centrar-imagen" alt="Pimiento">
+            <h2 class="logo-main">Pimiento</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$6</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="verduras">
+            <img src="imagenes/pepino.jpg" class="centrar-imagen" alt="Pepino">
+            <h2 class="logo-main">Pepino</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$9</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="verduras">
+            <img src="imagenes/kion.jpg" class="centrar-imagen" alt="Kion">
+            <h2 class="logo-main">Kion</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$2</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="verduras">
+            <img src="imagenes/apio.jpeg" class="centrar-imagen" alt="Apio">
+            <h2 class="logo-main">Apio</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$4</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="verduras">
+            <img src="imagenes/ajo.jpg" class="centrar-imagen" alt="Ajo">
+            <h2 class="logo-main">Ajo</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$7</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="verduras">
+            <img src="imagenes/camote.png" class="centrar-imagen" alt="Camote">
+            <h2 class="logo-main">Camote</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$7</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="verduras">
+            <img src="imagenes/yuca.jpg" class="centrar-imagen" alt="yuca">
+            <h2 class="logo-main">Yuca</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$7</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="verduras">
+            <img src="imagenes/zapallo.jpg" class="centrar-imagen" alt="Zapallo">
+            <h2 class="logo-main">Zapallo</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$7</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="verduras">
+            <img src="imagenes/cilantro.jpg" class="centrar-imagen" alt="Cilantro">
+            <h2 class="logo-main">Cilantro</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$1</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="verduras">
+            <img src="imagenes/esparragos.jpg" class="centrar-imagen" alt="Esparragos">
+            <h2 class="logo-main">Esparragos</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$3.50</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="verduras">
+            <img src="imagenes/Jalapeño.jpg" class="centrar-imagen" alt="Jalapeño">
+            <h2 class="logo-main">Jalapeño</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$2.50</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="verduras">
+            <img src="imagenes/Maíz.png" class="centrar-imagen" alt="Maíz">
+            <h2 class="logo-main">Maíz</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$3</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="granos">
+            <img src="imagenes/trigo.jpg" class="centrar-imagen" alt="Trigo">
+            <h2 class="logo-main">Trigo</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$5</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        
+        <div class="card" data-categoria="granos">
+            <img src="imagenes/Avena.jpg" class="centrar-imagen" alt="Avena">
+            <h2 class="logo-main">Avena</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$4.50</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        
+        <div class="card" data-categoria="granos">
+            <img src="imagenes/Arroz.jpg" class="centrar-imagen" alt="Arroz">
+            <h2 class="logo-main">Arroz</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$5</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        
+        <div class="card" data-categoria="granos">
+            <img src="imagenes/Cebada.jpg" class="centrar-imagen" alt="Cebada">
+            <h2 class="logo-main">Cebada</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$3</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        
+        <div class="card" data-categoria="granos">
+            <img src="imagenes/Millet.jpg" class="centrar-imagen" alt="Millet">
+            <h2 class="logo-main">Millet</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$3</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="granos">
+            <img src="imagenes/Centeno.jpg" class="centrar-imagen" alt="Centeno">
+            <h2 class="logo-main">Centeno</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$6</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="granos">
+            <img src="imagenes/Quinoa.jpg" class="centrar-imagen" alt="Quinoa">
+            <h2 class="logo-main">Quinoa</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$6</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="granos">
+            <img src="imagenes/trigo-sarraceno.jpg" class="centrar-imagen" alt="Trigo sarraceno">
+            <h2 class="logo-main">Trigo sarraceno</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$5</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="granos">
+            <img src="imagenes/Bulgur.jpg" class="centrar-imagen" alt="Bulgur">
+            <h2 class="logo-main">Bulgur</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$4</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="granos">
+            <img src="imagenes/Freekeh.jpg" class="centrar-imagen" alt="Freekeh ">
+            <h2 class="logo-main">Freekeh </h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$3</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="granos">
+            <img src="imagenes/Cuscús.jpg" class="centrar-imagen" alt="Cuscús">
+            <h2 class="logo-main">Cuscús</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$2</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="granos">
+            <img src="imagenes/Amaranto.jpg" class="centrar-imagen" alt="Amaranto">
+            <h2 class="logo-main">Amaranto</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$3</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="granos">
+            <img src="imagenes/Farro.jpg" class="centrar-imagen" alt="Farro">
+            <h2 class="logo-main">Farro</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$3</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="granos">
+            <img src="imagenes/Mijo.jpg" class="centrar-imagen" alt="Mijo">
+            <h2 class="logo-main">Mijo</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$4.50</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="granos">
+            <img src="imagenes/Sorgo.jpg" class="centrar-imagen" alt="Sorgo">
+            <h2 class="logo-main">Sorgo</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$4</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="granos">
+            <img src="imagenes/Amaranto.jpg" class="centrar-imagen" alt="Amaranto">
+            <h2 class="logo-main">Amaranto</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$3</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="granos">
+            <img src="imagenes/Garbanzo.jpg" class="centrar-imagen" alt="Garbanzo ">
+            <h2 class="logo-main">Garbanzo </h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$3</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="granos">
+            <img src="imagenes/Girasol.jpg" class="centrar-imagen" alt="Girasol">
+            <h2 class="logo-main">Girasol</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$6</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="granos">
+            <img src="imagenes/Soja.jpg" class="centrar-imagen" alt="Soja">
+            <h2 class="logo-main">Soja</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$3</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="granos">
+            <img src="imagenes/Frijol.jpg" class="centrar-imagen" alt="Frijol">
+            <h2 class="logo-main">Frijol</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$6</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="legumbres">
+            <img src="imagenes/Guisantes verdes.jpeg" class="centrar-imagen" alt="Guisantes verdes">
+            <h2 class="logo-main">Guisantes verdes</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$6</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="legumbres">
+            <img src="imagenes/Judías pintas.jpg" class="centrar-imagen" alt="Judías pintas">
+            <h2 class="logo-main">Judías pintas</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$4</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="legumbres">
+            <img src="imagenes/Lenteja Marrón.jpg" class="centrar-imagen" alt="Lentejas">
+            <h2 class="logo-main">Lentejas</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$2</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="legumbres">
+            <img src="imagenes/Cacahuetes.jpg" class="centrar-imagen" alt="Cacahuetes">
+            <h2 class="logo-main">Cacahuetes</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$4</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="legumbres">
+            <img src="imagenes/Habas.jpg" class="centrar-imagen" alt="Habas">
+            <h2 class="logo-main">Habas</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$2</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="legumbres">
+            <img src="imagenes/Altramuces.jpg" class="centrar-imagen" alt="Altramuces">
+            <h2 class="logo-main">Altramuces</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$4</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="legumbres">
+            <img src="imagenes/Alfalfa.jpg" class="centrar-imagen" alt="Alfalfa">
+            <h2 class="logo-main">Alfalfa</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$3</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="legumbres">
+            <img src="imagenes/Ejote.jpg" class="centrar-imagen" alt="Ejote">
+            <h2 class="logo-main">Ejote</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$4</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="legumbres">
+            <img src="imagenes/Lupino.jpg" class="centrar-imagen" alt="Lupino ">
+            <h2 class="logo-main">Lupino </h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$4</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="legumbres">
+            <img src="imagenes/Arveja.jpg" class="centrar-imagen" alt="Arveja">
+            <h2 class="logo-main">Arveja</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$5</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="legumbres">
+            <img src="imagenes/Azuki.jpg" class="centrar-imagen" alt="Azuki ">
+            <h2 class="logo-main">Azuki </h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$4</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="legumbres">
+            <img src="imagenes/Frijoles Negros.jpg" class="centrar-imagen" alt="Frijoles Negros">
+            <h2 class="logo-main">Frijoles Negros </h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$6</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="legumbres">
+            <img src="imagenes/Chícharo.jpg" class="centrar-imagen" alt="Chícharo ">
+            <h2 class="logo-main">Chícharo </h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$6</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="legumbres">
+            <img src="imagenes/Alubias Rojas.jpg" class="centrar-imagen" alt="Alubias Rojas ">
+            <h2 class="logo-main">Alubias Rojas </h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$5</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="legumbres">
+            <img src="imagenes/Alubias Blancas.jpg" class="centrar-imagen" alt="Alubias Blancas">
+            <h2 class="logo-main">Alubias Blancas</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$5</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="legumbres">
+            <img src="imagenes/Alubias Moradas.jpg" class="centrar-imagen" alt="Alubias Moradas">
+            <h2 class="logo-main">Alubias Moradas</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$5</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="legumbres">
+            <img src="imagenes/Alubias Pintas.jpg" class="centrar-imagen" alt="Alubias Pintas">
+            <h2 class="logo-main">Alubias Pintas</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$6</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="legumbres">
+            <img src="imagenes/Lenteja Roja.jpg" class="centrar-imagen" alt="Lenteja Roja">
+            <h2 class="logo-main">Lenteja Roja</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$6</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="legumbres">
+            <img src="imagenes/Lenteja Amarilla.jpg" class="centrar-imagen" alt="Lenteja Amarilla">
+            <h2 class="logo-main">Lenteja Amarilla</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$5</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-categoria="legumbres">
+            <img src="imagenes/Vainitas.jpg" class="centrar-imagen" alt="Vainitas">
+            <h2 class="logo-main">Vainitas</h2>
+            <p style="color:white; background-color: red; padding: 2px;">Precio: (Kg)$5</p>
+            <p>Cantidad : Kg, Ln ,Unidad</p>
+            <button class="button-button">Agregar al carrito</button>
+        </div>
+        <!-- Otros productos... -->
+    </section>
+    Ejote
+    </section>
+    <footer>
+        <hr>
+        <p class="copyright"> &copy; Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>
